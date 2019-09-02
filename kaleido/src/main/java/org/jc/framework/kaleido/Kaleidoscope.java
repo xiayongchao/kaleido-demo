@@ -30,6 +30,10 @@ public class Kaleidoscope {
         instancerMap.put(getKey(actualTypeArguments), instancer);
     }
 
+    public <T> Instancer getInstancer(Class<T> tClass) {
+        return instancerMap.get(getKey(tClass));
+    }
+
     private String getKey(Type... types) {
         StringJoiner stringJoiner = new StringJoiner("_");
         for (Type type : types) {

@@ -2,119 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="617e5756-be7e-4dcc-88c7-ac42ee15d827" name="Default Changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/kaleido_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/kaleido_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/yc_xia.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_38_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_38_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_38_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_38_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_38_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_38_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_11_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_22.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_22.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_22.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/kaleido.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/annotation/Converter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/AbstractConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/BooleanConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ByteConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/CharacterConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/Converter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/DefaultFieldMatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/DoubleConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/FloatConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/HashMapAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/IntegerConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/LongConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ShortConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/StringConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoBeanPostProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/NotNull.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/TypeToken.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/exception/KaleidoException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ByteInstancer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/Instancer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaleido-demo.iml" afterPath="$PROJECT_DIR$/kaleido-demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/KaleidoTestApplication.java" afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/KaleidoTestApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaleido/src/main/resources/META-INF/spring.factories" afterPath="$PROJECT_DIR$/kaleido/src/main/resources/META-INF/spring.factories" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/start/KaleidoAutoConfiguration.java" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/starter/KaleidoAutoConfiguration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/start/KaleidoProperties.java" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/starter/KaleidoProperties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ByteInstancer.java" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ByteInstancer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -133,34 +23,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FloatConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/FloatConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#241#242#0" expanded="false" />
-                <element signature="e#276#277#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashMapAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/HashMapAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#335#336#0" expanded="false" />
-                <element signature="e#377#378#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ByteConverter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ByteConverter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ByteConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -170,26 +33,62 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Kaleidoscope.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+              <folding>
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1323#1324#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Instancer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/Instancer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="171">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ByteInstancer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ByteInstancer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ByteInstancer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="190">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
                 <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#217#218#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Byte.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Byte.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractInstancer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="619">
+              <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+              <folding>
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#1523#1524#0" expanded="true" />
+                <element signature="e#1558#1559#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,16 +102,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultFieldMatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/DefaultFieldMatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -288,7 +177,6 @@
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/kaleidoscope.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/Converter.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/annotation/Converter.java" />
-        <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/ConverterBeanPostProcessor.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoBeanPostProcessor.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/TypeToken.java" />
@@ -297,11 +185,12 @@
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/starter/KaleidoAutoConfiguration.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/Instancer.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/exception/CollapsarException.java" />
-        <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/AbstractConverter.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/CharacterConverter.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ByteConverter.java" />
+        <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java" />
         <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ByteInstancer.java" />
+        <option value="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" />
       </list>
     </option>
   </component>
@@ -1213,15 +1102,15 @@
       <option name="presentableId" value="Default" />
       <updated>1567322942007</updated>
       <workItem from="1567322943615" duration="7614000" />
-      <workItem from="1567392582495" duration="6656000" />
+      <workItem from="1567392582495" duration="7237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14270000" />
+    <option name="totallyTimeSpent" value="14851000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1270,14 +1159,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Copier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11514">
@@ -1446,18 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1381#1382#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar!/org/apache/commons/beanutils/BeanUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1585,16 +1454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoBeanPostProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1698,32 +1557,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ByteConverter.java">
+    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/Instancer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/Instancer.java">
+    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/AbstractInstancer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="619">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding>
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Byte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ByteInstancer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="190">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <folding>
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/ByteConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

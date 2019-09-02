@@ -7,11 +7,6 @@ package org.jc.framework.kaleido.instancer;
 public class ByteInstancer extends AbstractInstancer<Byte> {
     @Override
     public Byte newInstance() {
-        return super.newInstance();
-    }
-
-    @Override
-    public Byte getDefault() {
-        return super.getDefault();
+        return 0;
     }
 }
