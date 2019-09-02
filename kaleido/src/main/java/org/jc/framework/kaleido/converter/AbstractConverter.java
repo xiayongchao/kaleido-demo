@@ -34,33 +34,29 @@ public abstract class AbstractConverter<S, T> implements Converter<S, T> {
     }
 
     @Override
-    public T convert(S source, Object... objects) {
+    public T convert(S source) {
         if (source == null) {
             return null;
         }
         T target;
-        if ((target = newTarget(source)) == null) {
+        if ((target = newTarget()) == null) {
             return null;
         }
-        copyProperties(target, source, objects);
+        copyProperties(source, target);
         return target;
     }
 
     @Override
-    public void copyProperties(T target, S source, Object... objects) {
+    public void copyProperties(S source, T target) {
 
     }
 
     /**
      * 实例化目标对象
      *
-     * @param source
      * @return
      */
-    protected T newTarget(S source, Object... objects) {
-        if (source == null) {
-            return null;
-        }
+    protected T newTarget() {
         if (tClass == null) {
             throw new RuntimeException("目标类型是泛型类型,需要重写newTarget方法主动创建");
         }

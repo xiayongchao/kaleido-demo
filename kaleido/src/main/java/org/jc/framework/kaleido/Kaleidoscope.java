@@ -17,12 +17,16 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date 2019/9/2
  */
 public class Kaleidoscope {
-    private final Map<String, Converter> converterMap = new ConcurrentHashMap<>();
-    private final Map<String, Instancer> instancerMap = new ConcurrentHashMap<>();
+    private final Map<String, Converter<?, ?>> converterMap = new ConcurrentHashMap<>();
+    private final Map<String, Instancer<?>> instancerMap = new ConcurrentHashMap<>();
 
     public void registerConverter(AbstractConverter converter) {
         Type[] actualTypeArguments = ((ParameterizedType) converter.getClass().getGenericSuperclass()).getActualTypeArguments();
         converterMap.put(getKey(actualTypeArguments), converter);
+    }
+
+    public <S, T> Converter<?, ?> getConverter(Class<S> sClass, Class<T> tClass) {
+        return converterMap.get(getKey(sClass, tClass));
     }
 
     public void registerInstancer(AbstractInstancer instancer) {
@@ -30,8 +34,8 @@ public class Kaleidoscope {
         instancerMap.put(getKey(actualTypeArguments), instancer);
     }
 
-    public <T> Instancer getInstancer(Class<T> tClass) {
-        return instancerMap.get(getKey(tClass));
+    public <T> Instancer<T> getInstancer(Class<T> tClass) {
+        return (Instancer<T>) instancerMap.get(getKey(tClass));
     }
 
     private String getKey(Type... types) {

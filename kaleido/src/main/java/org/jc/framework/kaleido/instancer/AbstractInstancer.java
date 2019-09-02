@@ -17,10 +17,6 @@ public abstract class AbstractInstancer<T> implements Instancer<T> {
     private final T defaultValue;
     private final Class<T> tClass;
 
-    public AbstractInstancer() {
-        this(null);
-    }
-
     public AbstractInstancer(T defaultValue) {
         //子类创建 会创建父类 子类调用时 此处的this是子类
         Class<?> c = this.getClass();
