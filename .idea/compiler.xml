@@ -10,10 +10,10 @@
         <module name="kaleido-test" />
       </profile>
     </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="kaleido-test" options="-parameters" />
-    </option>
+    <bytecodeTargetLevel>
+      <module name="kaleido" target="1.8" />
+      <module name="kaleido-demo" target="1.8" />
+      <module name="kaleido-test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

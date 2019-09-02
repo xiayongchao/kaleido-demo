@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  org.jc.framework.kaleido.start.KaleidoAutoConfiguration
+  org.jc.framework.kaleido.starter.KaleidoAutoConfiguration

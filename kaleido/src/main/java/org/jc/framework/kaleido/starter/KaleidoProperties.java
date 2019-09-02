@@ -1,4 +1,4 @@
-package org.jc.framework.kaleido.start;
+package org.jc.framework.kaleido.starter;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
