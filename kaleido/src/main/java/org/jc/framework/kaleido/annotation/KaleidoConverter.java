@@ -9,8 +9,5 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface ConverterSupport {
-    Class<?> sourceClass();
-
-    Class<?> targetClass();
+public @interface KaleidoConverter {
 }

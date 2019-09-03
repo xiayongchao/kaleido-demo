@@ -2,7 +2,6 @@ package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
 
 /**
  * @author xiayc
@@ -12,14 +11,7 @@ import org.jc.framework.kaleido.instancer.Instancer;
 public class BoxingLongConverter extends AbstractConverter<Number, Long> {
     @Override
     public Long convert(Number source) {
-        if (source == null) {
-            Instancer<Long> instancer = kaleidoscope.getInstancer(Long.class);
-            if (instancer == null) {
-                throw new KaleidoException("没有找到[Long]基本数据类型的Instancer");
-            }
-            return instancer.getDefault();
-        }
-        return source.longValue();
+        return source == null ? null : source.longValue();
     }
 
     @Override

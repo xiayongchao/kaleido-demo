@@ -2,7 +2,6 @@ package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
 
 /**
  * @author xiayc
@@ -12,14 +11,7 @@ import org.jc.framework.kaleido.instancer.Instancer;
 public class BoxingDoubleConverter extends AbstractConverter<Number, Double> {
     @Override
     public Double convert(Number source) {
-        if (source == null) {
-            Instancer<Double> instancer = kaleidoscope.getInstancer(Double.class);
-            if (instancer == null) {
-                throw new KaleidoException("没有找到[Double]基本数据类型的Instancer");
-            }
-            return instancer.getDefault();
-        }
-        return source.doubleValue();
+        return source == null ? null : source.doubleValue();
     }
 
     @Override

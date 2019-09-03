@@ -6,9 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="kaleido-test" />
         <module name="kaleido" />
+        <module name="kaleido-test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kaleido" target="1.8" />
+      <module name="kaleido-demo" target="1.8" />
+      <module name="kaleido-test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

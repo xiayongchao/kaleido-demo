@@ -3,12 +3,11 @@ package org.jc.framework.kaleido.annotation;
 import java.lang.annotation.*;
 
 /**
- * @author jc
- * @date 2019/9/2 0:16
+ * @author xiayc
+ * @date 2019/9/2
  */
-@Target({ElementType.TYPE})
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Inherited
-public @interface EnableKaleidoConfiguration {
+public @interface KaleidoInstancer {
 }

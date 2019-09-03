@@ -2,7 +2,6 @@ package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
 
 /**
  * @author xiayc
@@ -12,19 +11,12 @@ import org.jc.framework.kaleido.instancer.Instancer;
 public class BoxingByteConverter extends AbstractConverter<Number, Byte> {
     @Override
     public Byte convert(Number source) {
-        if (source == null) {
-            Instancer<Byte> instancer = kaleidoscope.getInstancer(Byte.class);
-            if (instancer == null) {
-                throw new KaleidoException("没有找到[Byte]基本数据类型的Instancer");
-            }
-            return instancer.getDefault();
-        }
-        return source.byteValue();
+        return source == null ? null : source.byteValue();
     }
 
     @Override
     public void copyProperties(Number source, Byte target) {
-        throw new KaleidoException("[Byte/byte]基本数据类型不支持copyProperties操作");
+        throw new KaleidoException("[Byte]基本数据类型不支持copyProperties操作");
     }
 
     /**
@@ -34,6 +26,6 @@ public class BoxingByteConverter extends AbstractConverter<Number, Byte> {
      */
     @Override
     protected Byte newTarget() {
-        throw new KaleidoException("[Byte/byte]基本数据类型不支持newTarget操作");
+        throw new KaleidoException("[Byte]基本数据类型不支持newTarget操作");
     }
 }

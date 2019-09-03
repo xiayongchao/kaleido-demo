@@ -2,7 +2,6 @@ package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
 
 /**
  * @author xiayc
@@ -12,14 +11,7 @@ import org.jc.framework.kaleido.instancer.Instancer;
 public class BoxingShortConverter extends AbstractConverter<Number, Short> {
     @Override
     public Short convert(Number source) {
-        if (source == null) {
-            Instancer<Short> instancer = kaleidoscope.getInstancer(Short.class);
-            if (instancer == null) {
-                throw new KaleidoException("没有找到[Short]基本数据类型的Instancer");
-            }
-            return instancer.getDefault();
-        }
-        return source.shortValue();
+        return source == null ? null : source.shortValue();
     }
 
     @Override

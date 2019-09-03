@@ -1,5 +1,7 @@
 package org.jc.framework.kaleido.converter;
 
+import org.jc.framework.kaleido.exception.KaleidoException;
+
 /**
  * @author xiayc
  * @date 2019/3/14
@@ -7,12 +9,13 @@ package org.jc.framework.kaleido.converter;
 public class StringConverter extends AbstractConverter<String, String> {
     @Override
     public String convert(String source) {
-        return super.convert(source);
+        return source == null ? null : source;
+
     }
 
     @Override
     public void copyProperties(String source, String target) {
-        super.copyProperties(source, target);
+        throw new KaleidoException("[String]数据类型不支持copyProperties操作");
     }
 
     /**
@@ -22,6 +25,6 @@ public class StringConverter extends AbstractConverter<String, String> {
      */
     @Override
     protected String newTarget() {
-        return super.newTarget();
+        throw new KaleidoException("[String]数据类型不支持newTarget操作");
     }
 }
