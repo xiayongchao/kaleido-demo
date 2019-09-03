@@ -1,25 +1,25 @@
 package org.jc.framework.kaleido.converter;
 
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
+import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
+import org.jc.framework.kaleido.instancer.Instancers;
 
 /**
  * @author xiayc
  * @date 2019/3/12
  */
-@KaleidoConverter
+@Converter
 @TypeRecognition(sourceClass = Number.class, targetClass = int.class)
 public class UnBoxIntegerConverter extends AbstractConverter<Number, Integer> {
     @Override
     public Integer convert(Number source) {
         if (source == null) {
-            Instancer<Integer> instancer = kaleidoscope.getInstancer(int.class);
-            if (instancer == null) {
+            Instancers<Integer> instancers = kaleidoscope.getInstancer(int.class);
+            if (instancers == null) {
                 throw new KaleidoException("没有找到[int]基本数据类型的Instancer");
             }
-            return instancer.getDefault();
+            return instancers.getDefault();
         }
         return source.intValue();
     }

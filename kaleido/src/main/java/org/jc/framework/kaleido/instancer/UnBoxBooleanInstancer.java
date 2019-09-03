@@ -1,6 +1,6 @@
 package org.jc.framework.kaleido.instancer;
 
-import org.jc.framework.kaleido.annotation.KaleidoInstancer;
+import org.jc.framework.kaleido.annotation.Instancer;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
 
@@ -8,7 +8,7 @@ import org.jc.framework.kaleido.exception.KaleidoException;
  * @author xiayc
  * @date 2019/9/2
  */
-@KaleidoInstancer
+@Instancer
 @TypeRecognition(targetClass = boolean.class)
 public class UnBoxBooleanInstancer extends AbstractInstancer<Boolean> {
     public UnBoxBooleanInstancer() {

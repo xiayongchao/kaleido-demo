@@ -1,25 +1,25 @@
 package org.jc.framework.kaleido.converter;
 
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
+import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
+import org.jc.framework.kaleido.instancer.Instancers;
 
 /**
  * @author xiayc
  * @date 2019/3/12
  */
-@KaleidoConverter
+@Converter
 @TypeRecognition(sourceClass = Byte.class, targetClass = byte.class)
 public class UnBoxByteConverter extends AbstractConverter<Number, Byte> {
     @Override
     public Byte convert(Number source) {
         if (source == null) {
-            Instancer<Byte> instancer = kaleidoscope.getInstancer(byte.class);
-            if (instancer == null) {
+            Instancers<Byte> instancers = kaleidoscope.getInstancer(byte.class);
+            if (instancers == null) {
                 throw new KaleidoException("没有找到[byte]基本数据类型的Instancer");
             }
-            return instancer.getDefault();
+            return instancers.getDefault();
         }
         return source.byteValue();
     }

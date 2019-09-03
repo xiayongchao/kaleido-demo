@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface KaleidoConverter {
+public @interface Converter {
     /**
      * Bean名称，用于Spring注入
      *

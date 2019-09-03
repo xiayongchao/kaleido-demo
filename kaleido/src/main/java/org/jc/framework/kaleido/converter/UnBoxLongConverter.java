@@ -1,25 +1,25 @@
 package org.jc.framework.kaleido.converter;
 
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
+import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
+import org.jc.framework.kaleido.instancer.Instancers;
 
 /**
  * @author xiayc
  * @date 2019/3/12
  */
-@KaleidoConverter
+@Converter
 @TypeRecognition(sourceClass = Number.class, targetClass = long.class)
 public class UnBoxLongConverter extends AbstractConverter<Number, Long> {
     @Override
     public Long convert(Number source) {
         if (source == null) {
-            Instancer<Long> instancer = kaleidoscope.getInstancer(long.class);
-            if (instancer == null) {
+            Instancers<Long> instancers = kaleidoscope.getInstancer(long.class);
+            if (instancers == null) {
                 throw new KaleidoException("没有找到[long]基本数据类型的Instancer");
             }
-            return instancer.getDefault();
+            return instancers.getDefault();
         }
         return source.longValue();
     }

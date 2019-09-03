@@ -1,6 +1,6 @@
 package org.jc.framework.kaleido.converter;
 
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
+import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
 
@@ -8,7 +8,7 @@ import org.jc.framework.kaleido.exception.KaleidoException;
  * @author xiayc
  * @date 2019/3/12
  */
-@KaleidoConverter
+@Converter
 @TypeRecognition(sourceClass = Number.class, targetClass = Short.class)
 public class BoxingShortConverter extends AbstractConverter<Number, Short> {
     @Override

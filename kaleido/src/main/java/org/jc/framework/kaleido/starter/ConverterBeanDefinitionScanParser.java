@@ -1,7 +1,7 @@
 package org.jc.framework.kaleido.starter;
 
 
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
+import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.definition.ConverterBeanDefinition;
 import org.jc.framework.kaleido.util.Strings;
 import org.springframework.core.type.AnnotationMetadata;
@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class ConverterBeanDefinitionScanParser extends KaleidoBeanDefinitionScanParser<ConverterBeanDefinition> {
     public ConverterBeanDefinitionScanParser() {
-        super(KaleidoConverter.class);
+        super(Converter.class);
     }
 
     @Override

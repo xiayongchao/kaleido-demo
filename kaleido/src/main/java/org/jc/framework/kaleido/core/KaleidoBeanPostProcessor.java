@@ -1,8 +1,8 @@
 package org.jc.framework.kaleido.core;
 
 import org.jc.framework.kaleido.Kaleidoscope;
-import org.jc.framework.kaleido.converter.AbstractConverter;
-import org.jc.framework.kaleido.instancer.AbstractInstancer;
+import org.jc.framework.kaleido.converter.Converters;
+import org.jc.framework.kaleido.instancer.Instancers;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
@@ -24,11 +24,11 @@ public class KaleidoBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof AbstractConverter) {
-            kaleidoscope.registerConverter((AbstractConverter) bean);
+        if (bean instanceof Converters) {
+            kaleidoscope.registerConverter((Converters) bean);
         }
-        if (bean instanceof AbstractInstancer) {
-            kaleidoscope.registerInstancer((AbstractInstancer) bean);
+        if (bean instanceof Instancers) {
+            kaleidoscope.registerInstancer((Instancers) bean);
         }
         return bean;
     }

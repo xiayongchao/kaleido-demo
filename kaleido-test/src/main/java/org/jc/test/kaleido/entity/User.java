@@ -8,6 +8,16 @@ public class User {
     private Long id;
     private String name;
     private Boolean isMan;
+    private UserExt userExt;
+
+    public User() {
+    }
+
+    public User(Long id, String name, Boolean isMan) {
+        this.id = id;
+        this.name = name;
+        this.isMan = isMan;
+    }
 
     public Long getId() {
         return id;
@@ -31,5 +41,13 @@ public class User {
 
     public void setMan(Boolean man) {
         isMan = man;
+    }
+
+    public UserExt getUserExt() {
+        return userExt;
+    }
+
+    public void setUserExt(UserExt userExt) {
+        this.userExt = userExt;
     }
 }

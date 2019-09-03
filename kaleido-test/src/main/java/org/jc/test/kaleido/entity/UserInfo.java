@@ -8,6 +8,7 @@ public class UserInfo {
     private long id;
     private String name;
     private boolean isMan;
+    private UserExtInfo userExt;
 
     public long getId() {
         return id;
@@ -31,5 +32,13 @@ public class UserInfo {
 
     public void setMan(boolean man) {
         isMan = man;
+    }
+
+    public UserExtInfo getUserExt() {
+        return userExt;
+    }
+
+    public void setUserExt(UserExtInfo userExt) {
+        this.userExt = userExt;
     }
 }

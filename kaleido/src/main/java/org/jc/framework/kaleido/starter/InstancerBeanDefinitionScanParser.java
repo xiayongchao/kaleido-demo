@@ -1,7 +1,7 @@
 package org.jc.framework.kaleido.starter;
 
 
-import org.jc.framework.kaleido.annotation.KaleidoInstancer;
+import org.jc.framework.kaleido.annotation.Instancer;
 import org.jc.framework.kaleido.definition.InstancerBeanDefinition;
 import org.jc.framework.kaleido.util.Strings;
 import org.springframework.core.type.AnnotationMetadata;
@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class InstancerBeanDefinitionScanParser extends KaleidoBeanDefinitionScanParser<InstancerBeanDefinition> {
     public InstancerBeanDefinitionScanParser() {
-        super(KaleidoInstancer.class);
+        super(Instancer.class);
     }
 
     @Override

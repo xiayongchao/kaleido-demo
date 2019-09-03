@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
  * @author xiayc
  * @date 2018/7/26
  */
-public abstract class AbstractConverter<S, T> implements Converter<S, T> {
+public abstract class AbstractConverter<S, T> implements Converters<S, T> {
     @Autowired
     protected Kaleidoscope kaleidoscope;
     private final Class<T> tClass;

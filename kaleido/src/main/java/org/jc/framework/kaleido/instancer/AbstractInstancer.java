@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
  * @author xiayc
  * @date 2019/9/2
  */
-public abstract class AbstractInstancer<T> implements Instancer<T> {
+public abstract class AbstractInstancer<T> implements Instancers<T> {
     /**
      * 默认值
      */
@@ -33,7 +33,7 @@ public abstract class AbstractInstancer<T> implements Instancer<T> {
         } else {
             throw new RuntimeException("请提供要转换的目标对象类型");
         }
-        this.defaultValue = null;
+        this.defaultValue = defaultValue;
     }
 
     @Override

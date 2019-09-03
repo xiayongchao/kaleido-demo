@@ -2,9 +2,9 @@ package org.jc.framework.kaleido.starter;
 
 
 import org.jc.framework.kaleido.Kaleidoscope;
+import org.jc.framework.kaleido.annotation.Converter;
+import org.jc.framework.kaleido.annotation.Instancer;
 import org.jc.framework.kaleido.annotation.KaleidoComponentScan;
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
-import org.jc.framework.kaleido.annotation.KaleidoInstancer;
 import org.jc.framework.kaleido.converter.AbstractConverter;
 import org.jc.framework.kaleido.definition.ConverterBeanDefinition;
 import org.jc.framework.kaleido.definition.InstancerBeanDefinition;
@@ -19,6 +19,8 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.MergedBeanDefinitionPostProcessor;
 import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.CollectionUtils;
 
@@ -32,12 +34,13 @@ import java.util.Set;
  * @author xiayc
  * @date 2019/3/25
  */
-public class KaleidoMergedBeanDefinitionPostProcessor implements MergedBeanDefinitionPostProcessor, InitializingBean, BeanFactoryAware {
+public class KaleidoMergedBeanDefinitionPostProcessor implements MergedBeanDefinitionPostProcessor, InitializingBean, BeanFactoryAware, ApplicationListener<ContextRefreshedEvent> {
     private DefaultListableBeanFactory beanFactory;
     private final Kaleidoscope kaleidoscope;
     private final ConverterBeanDefinitionScanParser converterBeanDefinitionScanParser;
     private final InstancerBeanDefinitionScanParser instancerBeanDefinitionScanParser;
     private final Set<String> kaleidoBeans = new HashSet<>();
+    private final Set<Object> autowireBeans = new HashSet<>();
 
     public KaleidoMergedBeanDefinitionPostProcessor(Kaleidoscope kaleidoscope,
                                                     ConverterBeanDefinitionScanParser converterBeanDefinitionScanParser,
@@ -60,15 +63,11 @@ public class KaleidoMergedBeanDefinitionPostProcessor implements MergedBeanDefin
         if (bean instanceof AbstractInstancer) {
             kaleidoscope.registerInstancer((AbstractInstancer) bean);
         }
-        System.out.println(beanName);
         return bean;
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println();
-        System.out.println("========================afterPropertiesSet");
-        System.out.println();
         try {
             Set<KaleidoComponentScanDefinition> kaleidoComponentScanDefinitions = new HashSet<>();
             kaleidoComponentScanDefinitions.add(new KaleidoComponentScanDefinition(new String[]{"org.jc.framework.kaleido"}, "**/*.class"));
@@ -80,8 +79,6 @@ public class KaleidoMergedBeanDefinitionPostProcessor implements MergedBeanDefin
 
     @Override
     public void postProcessMergedBeanDefinition(RootBeanDefinition beanDefinition, Class<?> beanType, String beanName) {
-        System.out.println("++++++++++++++++++=" + beanName);
-
         Set<KaleidoComponentScanDefinition> kaleidoComponentScanDefinitions = new HashSet<>();
         KaleidoComponentScan kaleidoComponentScan = AnnotationUtils.findAnnotation(beanType, KaleidoComponentScan.class);
         if (kaleidoComponentScan != null
@@ -112,12 +109,12 @@ public class KaleidoMergedBeanDefinitionPostProcessor implements MergedBeanDefin
             InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, ClassNotFoundException {
         if (!CollectionUtils.isEmpty(converterBeanDefinitions)) {
             for (ConverterBeanDefinition converterBeanDefinition : converterBeanDefinitions) {
-                registerKaleidoBean(converterBeanDefinition.getBeanName(), converterBeanDefinition.getBeanClassName(), KaleidoConverter.class);
+                registerKaleidoBean(converterBeanDefinition.getBeanName(), converterBeanDefinition.getBeanClassName(), Converter.class);
             }
         }
         if (!CollectionUtils.isEmpty(instancerBeanDefinitions)) {
             for (InstancerBeanDefinition instancerBeanDefinition : instancerBeanDefinitions) {
-                registerKaleidoBean(instancerBeanDefinition.getBeanName(), instancerBeanDefinition.getBeanClassName(), KaleidoInstancer.class);
+                registerKaleidoBean(instancerBeanDefinition.getBeanName(), instancerBeanDefinition.getBeanClassName(), Instancer.class);
 
             }
         }
@@ -135,13 +132,27 @@ public class KaleidoMergedBeanDefinitionPostProcessor implements MergedBeanDefin
         }
 
         object = beanType.getDeclaredConstructor().newInstance();
-        if (KaleidoConverter.class.equals(annotationClass)) {
+        if (Converter.class.equals(annotationClass)) {
             kaleidoscope.registerConverter((AbstractConverter) object);
-        } else if (KaleidoInstancer.class.equals(annotationClass)) {
+        } else if (Instancer.class.equals(annotationClass)) {
             kaleidoscope.registerInstancer((AbstractInstancer) object);
         }
 
+        autowireBeans.add(object);
         //将生成的对象注册到Spring容器
         this.beanFactory.registerSingleton(beanName, object);
+    }
+
+    @Override
+    public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
+        //root application context 没有parent，他就是老大.
+        if (contextRefreshedEvent.getApplicationContext().getParent() == null) {
+            //需要执行的逻辑代码，当spring容器初始化完成后就会执行该方法。
+            if (!CollectionUtils.isEmpty(autowireBeans)) {
+                for (Object autowireBean : autowireBeans) {
+                    beanFactory.autowireBean(autowireBean);
+                }
+            }
+        }
     }
 }

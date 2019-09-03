@@ -1,25 +1,25 @@
 package org.jc.framework.kaleido.converter;
 
-import org.jc.framework.kaleido.annotation.KaleidoConverter;
+import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancer;
+import org.jc.framework.kaleido.instancer.Instancers;
 
 /**
  * @author xiayc
  * @date 2019/3/12
  */
-@KaleidoConverter
+@Converter
 @TypeRecognition(sourceClass = Number.class, targetClass = short.class)
 public class UnBoxShortConverter extends AbstractConverter<Number, Short> {
     @Override
     public Short convert(Number source) {
         if (source == null) {
-            Instancer<Short> instancer = kaleidoscope.getInstancer(short.class);
-            if (instancer == null) {
+            Instancers<Short> instancers = kaleidoscope.getInstancer(short.class);
+            if (instancers == null) {
                 throw new KaleidoException("没有找到[short]基本数据类型的Instancer");
             }
-            return instancer.getDefault();
+            return instancers.getDefault();
         }
         return source.shortValue();
     }
