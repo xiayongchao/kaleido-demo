@@ -1,9 +1,9 @@
 package org.jc.framework.kaleido.starter;
 
 
-import org.jc.framework.collapsar.definition.CollapsarComponentScanDefinition;
-import org.jc.framework.collapsar.exception.CollapsarException;
-import org.jc.framework.collapsar.util.ArrayUtils;
+import org.jc.framework.kaleido.definition.KaleidoComponentScanDefinition;
+import org.jc.framework.kaleido.exception.KaleidoException;
+import org.jc.framework.kaleido.util.ArrayUtils;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.core.env.Environment;
@@ -44,17 +44,18 @@ public abstract class KaleidoBeanDefinitionScanParser<T> implements ResourceLoad
     /**
      * 扫描并解析组件
      *
-     * @param collapsarBeans
-     * @param collapsarComponentScanDefinition
+     * @param kaleidoBeans
+     * @param kaleidoComponentScanDefinition
      * @return
      * @throws IOException
      */
-    protected Set<T> scanParse(final Set<String> collapsarBeans, final CollapsarComponentScanDefinition collapsarComponentScanDefinition) throws IOException {
+    protected Set<T> scanParse(final Set<String> kaleidoBeans, final KaleidoComponentScanDefinition kaleidoComponentScanDefinition) throws IOException {
         String[] basePackages;
         String resourcePattern;
         Set<T> beanDefinitions = new HashSet<>();
 
-        if (ArrayUtils.isEmpty(basePackages = collapsarComponentScanDefinition.getBasePackages()) || !StringUtils.hasText(resourcePattern = collapsarComponentScanDefinition.getResourcePattern())) {
+        if (ArrayUtils.isEmpty(basePackages = kaleidoComponentScanDefinition.getBasePackages())
+                || !StringUtils.hasText(resourcePattern = kaleidoComponentScanDefinition.getResourcePattern())) {
             return beanDefinitions;
         }
         TypeFilter cachesFilter = new AnnotationTypeFilter(beanAnnotationClass);
@@ -64,8 +65,6 @@ public abstract class KaleidoBeanDefinitionScanParser<T> implements ResourceLoad
         Resource[] resources;
         T cachesBeanDefinition;
         String annotationName = beanAnnotationClass.getName();
-        String projectName = collapsarComponentScanDefinition.getProjectName();
-        String connector = collapsarComponentScanDefinition.getConnector();
         for (String basePackage : basePackages) {
             if (!StringUtils.hasText(basePackage)) {
                 continue;
@@ -82,10 +81,10 @@ public abstract class KaleidoBeanDefinitionScanParser<T> implements ResourceLoad
                 metadataReader = this.metadataReaderFactory.getMetadataReader(resource);
                 annotationMetadata = metadataReader.getAnnotationMetadata();
                 if (cachesFilter.match(metadataReader, this.metadataReaderFactory)) {
-                    if (collapsarBeans.contains(annotationMetadata.getClassName())) {
-                        throw new CollapsarException("不允许重复注册的@%s Bean[%s]", beanAnnotationClass.getName(), annotationMetadata.getClassName());
-                    } else if ((cachesBeanDefinition = generateBeanDefinition(projectName, connector, annotationMetadata, annotationName)) != null) {
-                        collapsarBeans.add(annotationMetadata.getClassName());
+                    if (kaleidoBeans.contains(annotationMetadata.getClassName())) {
+                        throw new KaleidoException("不允许重复注册的@%s Bean[%s]", beanAnnotationClass.getName(), annotationMetadata.getClassName());
+                    } else if ((cachesBeanDefinition = generateBeanDefinition(annotationMetadata, annotationName, null, null)) != null) {
+                        kaleidoBeans.add(annotationMetadata.getClassName());
                         beanDefinitions.add(cachesBeanDefinition);
                     }
                 }
@@ -94,7 +93,7 @@ public abstract class KaleidoBeanDefinitionScanParser<T> implements ResourceLoad
         return beanDefinitions;
     }
 
-    protected abstract T generateBeanDefinition(final String projectName, final String connector, final AnnotationMetadata annotationMetadata, final String annotationName);
+    protected abstract T generateBeanDefinition(final AnnotationMetadata annotationMetadata, final String annotationName, Class<?> sourceClass, Class<?> targetClass);
 
     @Override
     public void setEnvironment(Environment environment) {

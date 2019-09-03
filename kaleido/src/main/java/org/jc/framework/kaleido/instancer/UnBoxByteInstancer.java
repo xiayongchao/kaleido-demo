@@ -1,5 +1,6 @@
 package org.jc.framework.kaleido.instancer;
 
+import org.jc.framework.kaleido.annotation.KaleidoInstancer;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
 
@@ -7,6 +8,7 @@ import org.jc.framework.kaleido.exception.KaleidoException;
  * @author xiayc
  * @date 2019/9/2
  */
+@KaleidoInstancer
 @TypeRecognition(targetClass = byte.class)
 public class UnBoxByteInstancer extends AbstractInstancer<Byte> {
     public UnBoxByteInstancer() {

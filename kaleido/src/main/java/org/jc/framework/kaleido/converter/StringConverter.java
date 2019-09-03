@@ -1,11 +1,13 @@
 package org.jc.framework.kaleido.converter;
 
+import org.jc.framework.kaleido.annotation.KaleidoConverter;
 import org.jc.framework.kaleido.exception.KaleidoException;
 
 /**
  * @author xiayc
  * @date 2019/3/14
  */
+@KaleidoConverter
 public class StringConverter extends AbstractConverter<String, String> {
     @Override
     public String convert(String source) {

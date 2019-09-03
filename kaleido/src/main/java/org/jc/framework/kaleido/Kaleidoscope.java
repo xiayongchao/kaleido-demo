@@ -25,8 +25,8 @@ public class Kaleidoscope {
         converterMap.put(getKey(actualTypeArguments), converter);
     }
 
-    public <S, T> Converter<?, ?> getConverter(Class<S> sClass, Class<T> tClass) {
-        return converterMap.get(getKey(sClass, tClass));
+    public <S, T> Converter<S, T> getConverter(Class<S> sClass, Class<T> tClass) {
+        return (Converter<S, T>) converterMap.get(getKey(sClass, tClass));
     }
 
     public void registerInstancer(AbstractInstancer instancer) {
@@ -36,6 +36,10 @@ public class Kaleidoscope {
 
     public <T> Instancer<T> getInstancer(Class<T> tClass) {
         return (Instancer<T>) instancerMap.get(getKey(tClass));
+    }
+
+    public <S, T> T convert(S source){
+
     }
 
     private String getKey(Type... types) {

@@ -1,5 +1,7 @@
 package org.jc.framework.kaleido.annotation;
 
+import org.jc.framework.kaleido.util.Strings;
+
 import java.lang.annotation.*;
 
 /**
@@ -10,4 +12,10 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface KaleidoInstancer {
+    /**
+     * Bean名称，用于Spring注入
+     *
+     * @return
+     */
+    String value() default Strings.EMPTY_STRING;
 }

@@ -22,8 +22,23 @@ public class KaleidoAutoConfiguration {
     }
 
     @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-    @Bean(name = "org.jc.framework.kaleido.KaleidoBeanPostProcessor")
-    public KaleidoBeanPostProcessor kaleidoBeanPostProcessor(Kaleidoscope kaleidoscope) {
-        return new KaleidoBeanPostProcessor(kaleidoscope);
+    @Bean(name = "org.jc.framework.kaleido.ConverterBeanDefinitionScanParser")
+    public ConverterBeanDefinitionScanParser converterBeanDefinitionScanParser() {
+        return new ConverterBeanDefinitionScanParser();
+    }
+
+    @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+    @Bean(name = "org.jc.framework.kaleido.InstancerBeanDefinitionScanParser")
+    public InstancerBeanDefinitionScanParser instancerBeanDefinitionScanParser() {
+        return new InstancerBeanDefinitionScanParser();
+    }
+
+
+    @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+    @Bean(name = "org.jc.framework.kaleido.KaleidoMergedBeanDefinitionPostProcessor")
+    public KaleidoMergedBeanDefinitionPostProcessor kaleidoMergedBeanDefinitionPostProcessor(
+            Kaleidoscope kaleidoscope, ConverterBeanDefinitionScanParser converterBeanDefinitionScanParser,
+            InstancerBeanDefinitionScanParser instancerBeanDefinitionScanParser) {
+        return new KaleidoMergedBeanDefinitionPostProcessor(kaleidoscope, converterBeanDefinitionScanParser, instancerBeanDefinitionScanParser);
     }
 }

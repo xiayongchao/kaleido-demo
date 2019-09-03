@@ -1,5 +1,6 @@
 package org.jc.framework.kaleido.converter;
 
+import org.jc.framework.kaleido.annotation.KaleidoConverter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
 import org.jc.framework.kaleido.instancer.Instancer;
@@ -8,6 +9,7 @@ import org.jc.framework.kaleido.instancer.Instancer;
  * @author xiayc
  * @date 2019/3/12
  */
+@KaleidoConverter
 @TypeRecognition(sourceClass = Number.class, targetClass = float.class)
 public class UnBoxFloatConverter extends AbstractConverter<Number, Float> {
     @Override
