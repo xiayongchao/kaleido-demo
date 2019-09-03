@@ -1,5 +1,7 @@
 package org.jc.test.kaleido.entity;
 
+import java.util.List;
+
 /**
  * @author xiayc
  * @date 2019/9/3
@@ -9,6 +11,7 @@ public class User {
     private String name;
     private Boolean isMan;
     private UserExt userExt;
+    private List<Comment> commentList;
 
     public User() {
     }
@@ -49,5 +52,13 @@ public class User {
 
     public void setUserExt(UserExt userExt) {
         this.userExt = userExt;
+    }
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
     }
 }

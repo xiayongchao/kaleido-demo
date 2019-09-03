@@ -1,6 +1,7 @@
 package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.Kaleidoscope;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.ParameterizedType;
@@ -40,7 +41,7 @@ public abstract class AbstractConverter<S, T> implements Converters<S, T> {
         }
         T target;
         if ((target = newTarget()) == null) {
-            return null;
+            throw new RuntimeException("newTarget方法返回值不能为null");
         }
         copyProperties(source, target);
         return target;
@@ -48,7 +49,7 @@ public abstract class AbstractConverter<S, T> implements Converters<S, T> {
 
     @Override
     public void copyProperties(S source, T target) {
-
+        BeanUtils.copyProperties(source, target);
     }
 
     /**
@@ -58,7 +59,7 @@ public abstract class AbstractConverter<S, T> implements Converters<S, T> {
      */
     protected T newTarget() {
         if (tClass == null) {
-            throw new RuntimeException("目标类型是泛型类型,需要重写newTarget方法主动创建");
+            throw new RuntimeException("目标类型是泛型类型,需要重写newTarget方法主动创建实例");
         }
         try {
             return tClass.newInstance();
