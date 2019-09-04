@@ -23,14 +23,14 @@ import java.lang.reflect.Type;
  * @author yc_xia
  */
 public class TypeToken<T> {
-    final Type type;
+    private final Type type;
 
     @SuppressWarnings("unchecked")
-    protected TypeToken() {
+    public TypeToken() {
         this.type = getSuperclassTypeParameter(getClass());
     }
 
-    static Type getSuperclassTypeParameter(Class<?> subclass) {
+    private static Type getSuperclassTypeParameter(Class<?> subclass) {
         Type superclass = subclass.getGenericSuperclass();
         if (superclass instanceof Class) {
             throw new RuntimeException("Missing type parameter.");

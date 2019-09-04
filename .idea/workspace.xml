@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="617e5756-be7e-4dcc-88c7-ac42ee15d827" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/converter/CommentConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/CommentInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/instancer/ListCommentInfoInstancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/ConvertSupporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/InstanceSupporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/ListInstancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/converter/XMapConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/PageInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/MapInstancer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-test/kaleido-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/kaleido-test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/KaleidoTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/KaleidoTestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kaleido-test/src/test/java/org/jc/test/kaleido/KaleidoTestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/src/test/java/org/jc/test/kaleido/KaleidoTestApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/kaleido.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/kaleido.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/AbstractConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/converter/AbstractConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoBeanPostProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/ConvertSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/ConvertSupporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/InstanceSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/InstanceSupporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/TypeToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/TypeToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/target/classes/META-INF/kaleido.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KaleidoTestApplicationTests.contextLoads_0">
+  <component name="RunManager" selected="JUnit.KaleidoTestApplicationTests.contextLoads_1">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -187,6 +178,42 @@
       <option name="PACKAGE_NAME" value="org.jc.test.kaleido" />
       <option name="MAIN_CLASS_NAME" value="org.jc.test.kaleido.KaleidoTestApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KaleidoTestApplicationTests.contextLoads_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kaleido-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jc.test.kaleido.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.jc.test.kaleido" />
+      <option name="MAIN_CLASS_NAME" value="org.jc.test.kaleido.KaleidoTestApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads_2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KaleidoTestApplicationTests.contextLoads_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kaleido-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jc.test.kaleido.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.jc.test.kaleido" />
+      <option name="MAIN_CLASS_NAME" value="org.jc.test.kaleido.KaleidoTestApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads_3" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -280,11 +307,15 @@
       <item itemvalue="Spring Boot.KaleidoTestApplication" />
       <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
       <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
+      <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_2" />
+      <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_3" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
+        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
+        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_3" />
+        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_2" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -320,22 +351,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

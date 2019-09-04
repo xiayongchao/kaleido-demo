@@ -3,6 +3,7 @@ package org.jc.framework.kaleido.core;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.converter.Converters;
 import org.springframework.core.annotation.AnnotationUtils;
+import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -31,19 +32,32 @@ public abstract class ConvertSupporter extends InstanceSupporter {
         return (Converters<List<S>, List<T>>) converterMap.get(getListKey(sType, tType));
     }
 
+    private boolean isNumber(Type type) {
+        if (type.getTypeName().equals(float.class.getName())
+                || type.getTypeName().equals(double.class.getName())
+                || type.getTypeName().equals(byte.class.getName())
+                || type.getTypeName().equals(short.class.getName())
+                || type.getTypeName().equals(int.class.getName())
+                || type.getTypeName().equals(long.class.getName())) {
+            return true;
+        }
+        return false;
+    }
+
+    private Type getSuperclass(Type type) {
+        if (type instanceof ParameterizedTypeImpl) {
+            return null;
+        }
+        return ((Class) type).getGenericSuperclass();
+    }
+
     protected <S, T> Converters<S, T> getConverter(Type sType, Type tType) {
-        if (sType.getTypeName().equals(float.class.getName())
-                || sType.getTypeName().equals(double.class.getName())
-                || sType.getTypeName().equals(byte.class.getName())
-                || sType.getTypeName().equals(short.class.getName())
-                || sType.getTypeName().equals(int.class.getName())
-                || sType.getTypeName().equals(long.class.getName())) {
+        if (isNumber(sType)) {
             sType = Number.class;
         }
         Converters<?, ?> converters;
         while ((converters = converterMap.get(getKey(sType, tType))) == null
-                && (sType = (Class) ((Class) sType).getGenericSuperclass()) != null) {
-            converters = converterMap.get(getKey(sType, tType));
+                && (sType = getSuperclass(sType)) != null) {
         }
         return (Converters<S, T>) converters;
     }

@@ -3,6 +3,7 @@ package org.jc.framework.kaleido.core;
 import org.jc.framework.kaleido.annotation.Null;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 
+import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.StringJoiner;
@@ -49,6 +50,14 @@ public abstract class KaleidoscopeSupporter {
         return String.format("%s_%s", sTypeName, tTypeName);
     }
 
+    protected String getKey(ParameterizedType... types) {
+        StringJoiner stringJoiner = new StringJoiner("_");
+        for (ParameterizedType type : types) {
+            stringJoiner.add(type.getRawType().getTypeName());
+        }
+        return stringJoiner.toString();
+    }
+
     protected String getKey(Type... types) {
         StringJoiner stringJoiner = new StringJoiner("_");
         for (Type type : types) {
@@ -57,7 +66,7 @@ public abstract class KaleidoscopeSupporter {
         return stringJoiner.toString();
     }
 
-    protected boolean isEqual(Type sType, Type tType){
+    protected boolean isEqual(Type sType, Type tType) {
         return sType.equals(tType);
     }
 }

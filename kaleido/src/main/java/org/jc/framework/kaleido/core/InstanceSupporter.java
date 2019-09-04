@@ -27,8 +27,13 @@ public abstract class InstanceSupporter extends KaleidoscopeSupporter {
         return getInstancer((Type) tClass);
     }
 
-    protected <T> Instancers<T> getInstancer(Type tType) {
-        return (Instancers<T>) instancerMap.get(getKey(tType));
+    protected <T> Instancers<T> getInstancer(Type type) {
+        Instancers<?> instancers;
+        if ((instancers = instancerMap.get(getKey(type))) == null
+                && type instanceof ParameterizedType) {
+            instancers = instancerMap.get(getKey((ParameterizedType) type));
+        }
+        return (Instancers<T>) instancers;
     }
 
     protected <T> Instancers<List<T>> getListInstancer(Type tType) {
