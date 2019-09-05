@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="kaleido:war">
-    <output-path>$PROJECT_DIR$/kaleido/target</output-path>
-    <root id="archive" name="kaleido.war">
-      <element id="artifact" artifact-name="kaleido:war exploded" />
-    </root>
-  </artifact>
-</component>

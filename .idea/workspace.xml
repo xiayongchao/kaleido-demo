@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="617e5756-be7e-4dcc-88c7-ac42ee15d827" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/converter/XMapConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido-test/src/main/java/org/jc/test/kaleido/entity/PageInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/instancer/MapInstancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/kaleido_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/kaleido_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-test/src/test/java/org/jc/test/kaleido/KaleidoTestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/src/test/java/org/jc/test/kaleido/KaleidoTestApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/ConvertSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/ConvertSupporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/InstanceSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/InstanceSupporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/TypeToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/TypeToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/target/classes/META-INF/kaleido.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido-test/kaleido-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/kaleido-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/kaleido.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/kaleido.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +31,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -93,34 +94,136 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KaleidoTestApplicationTests.contextLoads_1">
+  <component name="RunManager" selected="JUnit.KaleidoTestApplicationTests.contextLoads">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
     </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <setting name="vmparams" value="" />
@@ -129,7 +232,44 @@
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
-      <method v="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
     </configuration>
     <configuration name="KaleidoTestApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kaleido-test" />
@@ -276,12 +416,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KaleidoTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="kaleido-test" />
+    <configuration default="false" name="KaleidoTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.jc.test.kaleido.KaleidoTestApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <module name="kaleido-test" />
+      <envs />
+      <method />
     </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
@@ -293,29 +433,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads" />
-      <item itemvalue="Spring Boot.KaleidoTestApplication" />
-      <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
       <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
+      <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
       <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_2" />
       <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_3" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
-        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_3" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_2" />
+        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
+        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -336,8 +466,15 @@
       <workItem from="1567478702774" duration="6083000" />
       <workItem from="1567494956582" duration="4636000" />
       <workItem from="1567499936395" duration="5998000" />
+      <workItem from="1567669365876" duration="326000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="326000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
