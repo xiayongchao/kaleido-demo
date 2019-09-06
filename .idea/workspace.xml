@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="617e5756-be7e-4dcc-88c7-ac42ee15d827" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/kaleido_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/kaleido_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido-test/kaleido-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/kaleido-test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/kaleido.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/kaleido.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaleido/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido-test/src/test/java/org/jc/test/kaleido/KaleidoTestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido-test/src/test/java/org/jc/test/kaleido/KaleidoTestApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/core/KaleidoscopeSupporter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +62,9 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
@@ -94,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KaleidoTestApplicationTests.contextLoads">
+  <component name="RunManager" selected="JUnit.KaleidoTestApplicationTests.contextLoads_1">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -442,9 +443,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_3" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_2" />
-        <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_1" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads_0" />
         <item itemvalue="JUnit.KaleidoTestApplicationTests.contextLoads" />
       </list>
@@ -489,24 +490,19 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kaleido/src/main/java/org/jc/framework/kaleido/Kaleidoscope.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
