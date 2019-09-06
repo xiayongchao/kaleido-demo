@@ -2,7 +2,13 @@ package org.jc.test.kaleido;
 
 import org.jc.framework.kaleido.Kaleidoscope;
 import org.jc.framework.kaleido.core.TypeToken;
-import org.jc.test.kaleido.entity.*;
+import org.jc.test.kaleido.entity.Comment;
+import org.jc.test.kaleido.entity.CommentInfo;
+import org.jc.test.kaleido.entity.Page;
+import org.jc.test.kaleido.entity.PageInfo;
+import org.jc.test.kaleido.entity.User;
+import org.jc.test.kaleido.entity.UserExt;
+import org.jc.test.kaleido.entity.UserInfo;
 import org.jc.test.kaleido.util.Gsons;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -59,5 +65,11 @@ public class KaleidoTestApplicationTests {
         commentPage.setList(Arrays.asList(new Comment(1L, "fda"), new Comment(2L, "hrwt")));
         PageInfo<CommentInfo> pageInfo = kaleidoscope.convert(Page.class, PageInfo.class, commentPage);
         System.out.println(Gsons.getJson(pageInfo));
+    }
+
+    @Test
+    public void contextLoads_4() {
+        String s = kaleidoscope.convertObject(Integer.class, Long.class, String.class, 1, 2L);
+        System.out.println(s);
     }
 }

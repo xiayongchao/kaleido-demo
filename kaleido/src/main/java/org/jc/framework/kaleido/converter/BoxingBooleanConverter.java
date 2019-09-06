@@ -27,7 +27,7 @@ public class BoxingBooleanConverter extends AbstractConverter<Boolean, Boolean> 
      * @return
      */
     @Override
-    protected Boolean newTarget() {
+    protected Boolean newTarget(Boolean source) {
         throw new KaleidoException("[Boolean]基本数据类型不支持newTarget操作");
     }
 }

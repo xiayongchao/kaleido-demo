@@ -35,7 +35,7 @@ public class UnBoxDoubleConverter extends AbstractConverter<Number, Double> {
      * @return
      */
     @Override
-    protected Double newTarget() {
+    protected Double newTarget(Number source) {
         throw new KaleidoException("[double]基本数据类型不支持newTarget操作");
     }
 }

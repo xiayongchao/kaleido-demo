@@ -32,7 +32,7 @@ public class CommentConverter extends AbstractConverter<List<Comment>, List<Comm
      * @return
      */
     @Override
-    protected List<CommentInfo> newTarget() {
+    protected List<CommentInfo> newTarget(List<Comment> source) {
         return new ArrayList<>();
     }
 }

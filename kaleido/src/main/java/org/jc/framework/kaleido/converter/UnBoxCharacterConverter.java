@@ -37,7 +37,7 @@ public class UnBoxCharacterConverter extends AbstractConverter<Character, Charac
      * @return
      */
     @Override
-    protected Character newTarget() {
+    protected Character newTarget(Character source) {
         throw new KaleidoException("[char]基本数据类型不支持newTarget操作");
     }
 }

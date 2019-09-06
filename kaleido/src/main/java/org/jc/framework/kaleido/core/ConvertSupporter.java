@@ -2,7 +2,11 @@ package org.jc.framework.kaleido.core;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.converter.Converters;
+import org.jc.framework.kaleido.converter.DoubleConverter;
+import org.jc.framework.kaleido.converter.TripleConverter;
+import org.jc.framework.kaleido.exception.KaleidoException;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.core.convert.converter.Converter;
 import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 
 import java.lang.reflect.ParameterizedType;
@@ -28,6 +32,7 @@ public abstract class ConvertSupporter extends InstanceSupporter {
         return getConverter((Type) sClass, (Type) tClass);
     }
 
+    @SuppressWarnings("unchecked")
     protected <S, T> Converters<List<S>, List<T>> getListConverter(Type sType, Type tType) {
         return (Converters<List<S>, List<T>>) converterMap.get(getListKey(sType, tType));
     }
@@ -51,6 +56,7 @@ public abstract class ConvertSupporter extends InstanceSupporter {
         return ((Class) type).getGenericSuperclass();
     }
 
+    @SuppressWarnings("unchecked")
     protected <S, T> Converters<S, T> getConverter(Type sType, Type tType) {
         if (isNumber(sType)) {
             sType = Number.class;
@@ -60,5 +66,35 @@ public abstract class ConvertSupporter extends InstanceSupporter {
                 && (sType = getSuperclass(sType)) != null) {
         }
         return (Converters<S, T>) converters;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <S, T> Converter<S, T> get(Type sType, Type tType) {
+        String key = getKey(sType, tType);
+        Converter<?, ?> converter = (Converter<?, ?>) converterMap.get(key);
+        if (converter == null) {
+            throw new KaleidoException("没有找到[%s]到[%s]的转换器，请进行注册", sType.getTypeName(), tType.getTypeName());
+        }
+        return (Converter<S, T>) converter;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <S, E, T> DoubleConverter<S, E, T> get(Type sType, Type eType, Type tType) {
+        String key = getKey(sType, eType, tType);
+        DoubleConverter<?, ?, ?> converter = (DoubleConverter<?, ?, ?>) converterMap.get(key);
+        if (converter == null) {
+            throw new KaleidoException("没有找到[%s,%s]到[%s]的转换器，请进行注册", sType.getTypeName(), eType.getTypeName(), tType.getTypeName());
+        }
+        return (DoubleConverter<S, E, T>) converter;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <S, E, A, T> TripleConverter<S, E, A, T> get(Type sType, Type eType, Type aType, Type tType) {
+        String key = getKey(sType, eType, aType, tType);
+        TripleConverter<?, ?, ?, ?> converter = (TripleConverter<?, ?, ?, ?>) converterMap.get(key);
+        if (converter == null) {
+            throw new KaleidoException("没有找到[%s,%s,%s]到[%s]的转换器，请进行注册", sType.getTypeName(), eType.getTypeName(), aType.getTypeName(), tType.getTypeName());
+        }
+        return (TripleConverter<S, E, A, T>) converter;
     }
 }

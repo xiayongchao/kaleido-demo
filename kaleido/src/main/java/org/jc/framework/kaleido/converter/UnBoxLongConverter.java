@@ -35,7 +35,7 @@ public class UnBoxLongConverter extends AbstractConverter<Number, Long> {
      * @return
      */
     @Override
-    protected Long newTarget() {
+    protected Long newTarget(Number source) {
         throw new KaleidoException("[long]基本数据类型不支持newTarget操作");
     }
 }

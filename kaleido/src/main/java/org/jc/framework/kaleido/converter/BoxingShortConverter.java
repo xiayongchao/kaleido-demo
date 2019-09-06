@@ -27,7 +27,7 @@ public class BoxingShortConverter extends AbstractConverter<Number, Short> {
      * @return
      */
     @Override
-    protected Short newTarget() {
+    protected Short newTarget(Number source) {
         throw new KaleidoException("[Short]基本数据类型不支持newTarget操作");
     }
 }

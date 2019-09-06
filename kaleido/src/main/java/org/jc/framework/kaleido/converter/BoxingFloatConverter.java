@@ -27,7 +27,7 @@ public class BoxingFloatConverter extends AbstractConverter<Number, Float> {
      * @return
      */
     @Override
-    protected Float newTarget() {
+    protected Float newTarget(Number source) {
         throw new KaleidoException("[Float]基本数据类型不支持newTarget操作");
     }
 }

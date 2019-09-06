@@ -25,7 +25,7 @@ public class XMapConverter extends AbstractConverter<Map<String, Integer>, Map<S
      * @return
      */
     @Override
-    protected Map<String, Long> newTarget() {
+    protected Map<String, Long> newTarget(Map<String, Integer> source) {
         return new HashMap<>();
     }
 }

@@ -27,7 +27,7 @@ public class BoxingIntegerConverter extends AbstractConverter<Number, Integer> {
      * @return
      */
     @Override
-    protected Integer newTarget() {
+    protected Integer newTarget(Number source) {
         throw new KaleidoException("[Integer]基本数据类型不支持newTarget操作");
     }
 }

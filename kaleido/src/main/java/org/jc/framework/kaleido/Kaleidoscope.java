@@ -7,7 +7,11 @@ import org.jc.framework.kaleido.core.TypeToken;
 import org.jc.framework.kaleido.exception.KaleidoException;
 import org.jc.framework.kaleido.instancer.Instancers;
 
-import java.lang.reflect.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
 import java.util.List;
 
 /**
@@ -110,16 +114,33 @@ public class Kaleidoscope extends ConvertSupporter {
         return targetList;
     }
 
-    public <S, T> T convertObject(TypeToken sTypeToken, TypeToken tTypeToken, S source) {
-        return convertObject(sTypeToken.getType(), tTypeToken.getType(), source);
+    @SuppressWarnings("unchecked")
+    public <S, T> T convertObject(Object s, Object t, S source) {
+        return (T) get(getType(s), getType(t)).convert(source);
     }
 
-    private <S, T> T convertObject(Type sType, Type tType, S source) {
-        Converters<S, T> converters = getConverter(sType, tType);
-        if (converters == null) {
-            throw new KaleidoException("没有找到[%s]到[%s]的转换器，请进行注册", sType.getTypeName(), tType.getTypeName());
+    @SuppressWarnings("unchecked")
+    public <S, E, T> T convertObject(Object s, Object e, Object t,
+                                     S source, E extend) {
+        return (T) get(getType(s), getType(e), getType(t)).convert(source, extend);
+    }
+
+    @SuppressWarnings("unchecked")
+    public <S, E, A, T> T convertObject(Object s, Object e, Object a,
+                                        Object t, S source, E extend, A attach) {
+        return (T) get(getType(s), getType(e), getType(a), getType(t)).convert(source, extend, attach);
+    }
+
+    private Type getType(Object o) {
+        Type type;
+        if (o instanceof Class) {
+            type = (Class) o;
+        } else if (o instanceof TypeToken) {
+            type = ((TypeToken) o).getType();
+        } else {
+            throw new KaleidoException("illegal type of '%s'", o.getClass().getName());
         }
-        return converters.convert(source);
+        return type;
     }
 
     private Class getTypeClass(Type type) {

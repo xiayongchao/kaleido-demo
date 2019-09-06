@@ -26,7 +26,7 @@ public class StringConverter extends AbstractConverter<String, String> {
      * @return
      */
     @Override
-    protected String newTarget() {
+    protected String newTarget(String source) {
         throw new KaleidoException("[String]数据类型不支持newTarget操作");
     }
 }

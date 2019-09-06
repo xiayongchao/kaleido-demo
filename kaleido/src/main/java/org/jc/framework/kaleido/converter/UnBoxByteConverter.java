@@ -35,7 +35,7 @@ public class UnBoxByteConverter extends AbstractConverter<Number, Byte> {
      * @return
      */
     @Override
-    protected Byte newTarget() {
+    protected Byte newTarget(Number source) {
         throw new KaleidoException("[byte]基本数据类型不支持newTarget操作");
     }
 }

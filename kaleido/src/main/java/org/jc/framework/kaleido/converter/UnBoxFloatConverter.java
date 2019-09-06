@@ -35,7 +35,7 @@ public class UnBoxFloatConverter extends AbstractConverter<Number, Float> {
      * @return
      */
     @Override
-    protected Float newTarget() {
+    protected Float newTarget(Number source) {
         throw new KaleidoException("[float]基本数据类型不支持newTarget操作");
     }
 }

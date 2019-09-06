@@ -35,7 +35,7 @@ public class UnBoxShortConverter extends AbstractConverter<Number, Short> {
      * @return
      */
     @Override
-    protected Short newTarget() {
+    protected Short newTarget(Number source) {
         throw new KaleidoException("[short]基本数据类型不支持newTarget操作");
     }
 }

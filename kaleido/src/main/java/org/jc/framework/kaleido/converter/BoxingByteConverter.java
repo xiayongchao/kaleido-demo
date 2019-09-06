@@ -27,7 +27,7 @@ public class BoxingByteConverter extends AbstractConverter<Number, Byte> {
      * @return
      */
     @Override
-    protected Byte newTarget() {
+    protected Byte newTarget(Number source) {
         throw new KaleidoException("[Byte]基本数据类型不支持newTarget操作");
     }
 }

@@ -28,7 +28,7 @@ public class BoxingCharacterConverter extends AbstractConverter<Character, Chara
      * @return
      */
     @Override
-    protected Character newTarget() {
+    protected Character newTarget(Character source) {
         throw new KaleidoException("[Character]基本数据类型不支持newTarget操作");
     }
 }

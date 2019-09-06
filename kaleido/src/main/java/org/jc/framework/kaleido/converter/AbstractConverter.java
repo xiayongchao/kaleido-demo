@@ -1,6 +1,7 @@
 package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.Kaleidoscope;
+import org.jc.framework.kaleido.instancer.Instancers;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -40,7 +41,7 @@ public abstract class AbstractConverter<S, T> implements Converters<S, T> {
             return null;
         }
         T target;
-        if ((target = newTarget()) == null) {
+        if ((target = newTarget(source)) == null) {
             throw new RuntimeException("newTarget方法返回值不能为null");
         }
         copyProperties(source, target);
@@ -57,9 +58,13 @@ public abstract class AbstractConverter<S, T> implements Converters<S, T> {
      *
      * @return
      */
-    protected T newTarget() {
+    protected T newTarget(S source) {
         if (tClass == null) {
             throw new RuntimeException("目标类型是泛型类型,需要重写newTarget方法主动创建实例");
+        }
+        Instancers<T> instancer = kaleidoscope.getInstancer(tClass);
+        if (instancer != null) {
+            return instancer.newInstance();
         }
         try {
             return tClass.newInstance();

@@ -27,7 +27,7 @@ public class BoxingLongConverter extends AbstractConverter<Number, Long> {
      * @return
      */
     @Override
-    protected Long newTarget() {
+    protected Long newTarget(Number source) {
         throw new KaleidoException("[Long]基本数据类型不支持newTarget操作");
     }
 }
