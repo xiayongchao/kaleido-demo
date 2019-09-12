@@ -3,7 +3,7 @@ package org.jc.framework.kaleido.converter;
 import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 
 /**
  * @author xiayc
@@ -15,11 +15,11 @@ public class UnBoxBooleanConverter extends AbstractConverter<Boolean, Boolean> {
     @Override
     public Boolean convert(Boolean source) {
         if (source == null) {
-            Instancers<Boolean> instancers = kaleidoscope.getInstancer(boolean.class);
-            if (instancers == null) {
+            InstanceSupport<Boolean> instanceSupport = kaleidoscope.getInstancer(boolean.class);
+            if (instanceSupport == null) {
                 throw new KaleidoException("没有找到[boolean]基本数据类型的Instancer");
             }
-            return instancers.getDefault();
+            return instanceSupport.getDefault();
         }
         return source;
     }

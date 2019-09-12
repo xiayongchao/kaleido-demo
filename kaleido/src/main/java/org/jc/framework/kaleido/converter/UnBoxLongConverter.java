@@ -3,7 +3,7 @@ package org.jc.framework.kaleido.converter;
 import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 
 /**
  * @author xiayc
@@ -15,11 +15,11 @@ public class UnBoxLongConverter extends AbstractConverter<Number, Long> {
     @Override
     public Long convert(Number source) {
         if (source == null) {
-            Instancers<Long> instancers = kaleidoscope.getInstancer(long.class);
-            if (instancers == null) {
+            InstanceSupport<Long> instanceSupport = kaleidoscope.getInstancer(long.class);
+            if (instanceSupport == null) {
                 throw new KaleidoException("没有找到[long]基本数据类型的Instancer");
             }
-            return instancers.getDefault();
+            return instanceSupport.getDefault();
         }
         return source.longValue();
     }

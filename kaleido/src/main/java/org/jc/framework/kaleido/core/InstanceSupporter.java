@@ -1,7 +1,7 @@
 package org.jc.framework.kaleido.core;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 import org.springframework.core.annotation.AnnotationUtils;
 
 import java.lang.reflect.ParameterizedType;
@@ -15,32 +15,32 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date 2019/9/3 23:25
  */
 public abstract class InstanceSupporter extends KaleidoscopeSupporter {
-    private final Map<String, Instancers<?>> instancerMap = new ConcurrentHashMap<>();
+    private final Map<String, InstanceSupport<?>> instancerMap = new ConcurrentHashMap<>();
 
-    public void registerInstancer(Instancers instancers) {
-        Class<? extends Instancers> instancersClass;
-        Type[] actualTypeArguments = ((ParameterizedType) (instancersClass = instancers.getClass()).getGenericSuperclass()).getActualTypeArguments();
-        instancerMap.put(getKey(actualTypeArguments[0], AnnotationUtils.findAnnotation(instancersClass, TypeRecognition.class)), instancers);
+    public void registerInstancer(InstanceSupport instanceSupport) {
+        Class<? extends InstanceSupport> instancersClass;
+        Type[] actualTypeArguments = ((ParameterizedType) (instancersClass = instanceSupport.getClass()).getGenericSuperclass()).getActualTypeArguments();
+        instancerMap.put(getKey(actualTypeArguments[0], AnnotationUtils.findAnnotation(instancersClass, TypeRecognition.class)), instanceSupport);
     }
 
-    public <T> Instancers<T> getInstancer(Class<T> tClass) {
+    public <T> InstanceSupport<T> getInstancer(Class<T> tClass) {
         return getInstancer((Type) tClass);
     }
 
-    protected <T> Instancers<T> getInstancer(Type type) {
-        Instancers<?> instancers;
-        if ((instancers = instancerMap.get(getKey(type))) == null
+    protected <T> InstanceSupport<T> getInstancer(Type type) {
+        InstanceSupport<?> instanceSupport;
+        if ((instanceSupport = instancerMap.get(getKey(type))) == null
                 && type instanceof ParameterizedType) {
-            instancers = instancerMap.get(getKey((ParameterizedType) type));
+            instanceSupport = instancerMap.get(getKey((ParameterizedType) type));
         }
-        return (Instancers<T>) instancers;
+        return (InstanceSupport<T>) instanceSupport;
     }
 
-    protected <T> Instancers<List<T>> getListInstancer(Type tType) {
-        Instancers<?> instancers = instancerMap.get(getListKey(tType));
-        if (instancers == null) {
-            instancers = instancerMap.get(getListKey(null));
+    protected <T> InstanceSupport<List<T>> getListInstancer(Type tType) {
+        InstanceSupport<?> instanceSupport = instancerMap.get(getListKey(tType));
+        if (instanceSupport == null) {
+            instanceSupport = instancerMap.get(getListKey(null));
         }
-        return (Instancers<List<T>>) instancers;
+        return (InstanceSupport<List<T>>) instanceSupport;
     }
 }

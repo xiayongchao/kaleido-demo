@@ -4,7 +4,7 @@ package org.jc.framework.kaleido.converter;
  * @author xiayc
  * @date 2019/5/10
  */
-public interface DoubleConverter<S, E, T> extends Converters<S, T> {
+public interface DoubleConverter<S, E, T> extends ConvertSupport<S, T> {
     /**
      * 2转1
      *

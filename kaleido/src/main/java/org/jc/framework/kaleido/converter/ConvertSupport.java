@@ -4,7 +4,7 @@ package org.jc.framework.kaleido.converter;
  * @author xiayc
  * @date 2019/9/2
  */
-public interface Converters<S, T> {
+public interface ConvertSupport<S, T> {
     /**
      * 转换对象S到T
      *

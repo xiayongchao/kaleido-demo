@@ -3,7 +3,7 @@ package org.jc.framework.kaleido.converter;
 import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 
 /**
  * @author xiayc
@@ -15,11 +15,11 @@ public class UnBoxByteConverter extends AbstractConverter<Number, Byte> {
     @Override
     public Byte convert(Number source) {
         if (source == null) {
-            Instancers<Byte> instancers = kaleidoscope.getInstancer(byte.class);
-            if (instancers == null) {
+            InstanceSupport<Byte> instanceSupport = kaleidoscope.getInstancer(byte.class);
+            if (instanceSupport == null) {
                 throw new KaleidoException("没有找到[byte]基本数据类型的Instancer");
             }
-            return instancers.getDefault();
+            return instanceSupport.getDefault();
         }
         return source.byteValue();
     }

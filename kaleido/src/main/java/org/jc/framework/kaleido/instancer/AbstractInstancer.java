@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
  * @author xiayc
  * @date 2019/9/2
  */
-public abstract class AbstractInstancer<T> implements Instancers<T> {
+public abstract class AbstractInstancer<T> implements InstanceSupport<T> {
     /**
      * 默认值
      */

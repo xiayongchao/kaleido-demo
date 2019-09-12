@@ -1,7 +1,7 @@
 package org.jc.framework.kaleido.converter;
 
 import org.jc.framework.kaleido.Kaleidoscope;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
  * @author xiayc
  * @date 2018/7/26
  */
-public abstract class AbstractConverter<S, T> implements Converters<S, T> {
+public abstract class AbstractConverter<S, T> implements ConvertSupport<S, T> {
     @Autowired
     protected Kaleidoscope kaleidoscope;
     private final Class<T> tClass;
@@ -62,7 +62,7 @@ public abstract class AbstractConverter<S, T> implements Converters<S, T> {
         if (tClass == null) {
             throw new RuntimeException("目标类型是泛型类型,需要重写newTarget方法主动创建实例");
         }
-        Instancers<T> instancer = kaleidoscope.getInstancer(tClass);
+        InstanceSupport<T> instancer = kaleidoscope.getInstancer(tClass);
         if (instancer != null) {
             return instancer.newInstance();
         }

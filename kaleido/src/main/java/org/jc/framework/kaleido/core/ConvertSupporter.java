@@ -1,7 +1,7 @@
 package org.jc.framework.kaleido.core;
 
 import org.jc.framework.kaleido.annotation.TypeRecognition;
-import org.jc.framework.kaleido.converter.Converters;
+import org.jc.framework.kaleido.converter.ConvertSupport;
 import org.jc.framework.kaleido.converter.DoubleConverter;
 import org.jc.framework.kaleido.converter.TripleConverter;
 import org.jc.framework.kaleido.exception.KaleidoException;
@@ -20,21 +20,21 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date 2019/9/3 23:25
  */
 public abstract class ConvertSupporter extends InstanceSupporter {
-    private final Map<String, Converters<?, ?>> converterMap = new ConcurrentHashMap<>();
+    private final Map<String, ConvertSupport<?, ?>> converterMap = new ConcurrentHashMap<>();
 
-    public void registerConverter(Converters converters) {
-        Class<? extends Converters> convertersClass;
-        Type[] actualTypeArguments = ((ParameterizedType) (convertersClass = converters.getClass()).getGenericSuperclass()).getActualTypeArguments();
-        converterMap.put(getKey(actualTypeArguments[0], actualTypeArguments[1], AnnotationUtils.findAnnotation(convertersClass, TypeRecognition.class)), converters);
+    public void registerConverter(ConvertSupport convertSupport) {
+        Class<? extends ConvertSupport> convertersClass;
+        Type[] actualTypeArguments = ((ParameterizedType) (convertersClass = convertSupport.getClass()).getGenericSuperclass()).getActualTypeArguments();
+        converterMap.put(getKey(actualTypeArguments[0], actualTypeArguments[1], AnnotationUtils.findAnnotation(convertersClass, TypeRecognition.class)), convertSupport);
     }
 
-    public <S, T> Converters<S, T> getConverter(Class<S> sClass, Class<T> tClass) {
+    public <S, T> ConvertSupport<S, T> getConverter(Class<S> sClass, Class<T> tClass) {
         return getConverter((Type) sClass, (Type) tClass);
     }
 
     @SuppressWarnings("unchecked")
-    protected <S, T> Converters<List<S>, List<T>> getListConverter(Type sType, Type tType) {
-        return (Converters<List<S>, List<T>>) converterMap.get(getListKey(sType, tType));
+    protected <S, T> ConvertSupport<List<S>, List<T>> getListConverter(Type sType, Type tType) {
+        return (ConvertSupport<List<S>, List<T>>) converterMap.get(getListKey(sType, tType));
     }
 
     private boolean isNumber(Type type) {
@@ -57,15 +57,15 @@ public abstract class ConvertSupporter extends InstanceSupporter {
     }
 
     @SuppressWarnings("unchecked")
-    protected <S, T> Converters<S, T> getConverter(Type sType, Type tType) {
+    protected <S, T> ConvertSupport<S, T> getConverter(Type sType, Type tType) {
         if (isNumber(sType)) {
             sType = Number.class;
         }
-        Converters<?, ?> converters;
-        while ((converters = converterMap.get(getKey(sType, tType))) == null
+        ConvertSupport<?, ?> convertSupport;
+        while ((convertSupport = converterMap.get(getKey(sType, tType))) == null
                 && (sType = getSuperclass(sType)) != null) {
         }
-        return (Converters<S, T>) converters;
+        return (ConvertSupport<S, T>) convertSupport;
     }
 
     @SuppressWarnings("unchecked")

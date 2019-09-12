@@ -1,11 +1,11 @@
 package org.jc.framework.kaleido;
 
 
-import org.jc.framework.kaleido.converter.Converters;
+import org.jc.framework.kaleido.converter.ConvertSupport;
 import org.jc.framework.kaleido.core.ConvertSupporter;
 import org.jc.framework.kaleido.core.TypeToken;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -24,23 +24,23 @@ public class Kaleidoscope extends ConvertSupporter {
     }
 
     private <S, T> T convert(Type sType, Type tType, S source) {
-        Converters<S, T> converters = getConverter(sType, tType);
-        if (converters != null) {
-            return converters.convert(source);
+        ConvertSupport<S, T> convertSupport = getConverter(sType, tType);
+        if (convertSupport != null) {
+            return convertSupport.convert(source);
         }
         if (sType.getTypeName().equals(List.class.getName())
                 && tType.getTypeName().equals(List.class.getName())) {
             throw new KaleidoException("不支持List转换，请使用convertList方法");
         }
-        Instancers<T> instancers = getInstancer(tType);
+        InstanceSupport<T> instanceSupport = getInstancer(tType);
         Class<T> tClass = (Class<T>) getTypeClass(tType);
         Class<S> sClass = (Class<S>) getTypeClass(sType);
         T target;
-        if (instancers != null) {
+        if (instanceSupport != null) {
             if (source == null) {
-                return instancers.getDefault();
+                return instanceSupport.getDefault();
             }
-            target = instancers.newInstance();
+            target = instanceSupport.newInstance();
         } else {
             try {
                 target = tClass.getDeclaredConstructor().newInstance();
@@ -96,18 +96,18 @@ public class Kaleidoscope extends ConvertSupporter {
                 || tType.getTypeName().equals(List.class.getName())) {
             throw new KaleidoException("不支持List<List>转换，请使用convertObject方法");
         }
-        Converters<List<S>, List<T>> converter = getListConverter(sType, tType);
+        ConvertSupport<List<S>, List<T>> converter = getListConverter(sType, tType);
         if (converter != null) {
             return converter.convert(sourceList);
         }
-        Instancers<List<T>> instancers = getListInstancer(tType);
-        if (instancers == null) {
+        InstanceSupport<List<T>> instanceSupport = getListInstancer(tType);
+        if (instanceSupport == null) {
             throw new KaleidoException("实例化[%s<%s>]失败，请提供Instancer", List.class.getName(), tType.getTypeName());
         }
         if (sourceList == null) {
-            return instancers.getDefault();
+            return instanceSupport.getDefault();
         }
-        List<T> targetList = instancers.newInstance();
+        List<T> targetList = instanceSupport.newInstance();
         for (S source : sourceList) {
             targetList.add(convert(sType, tType, source));
         }

@@ -3,7 +3,7 @@ package org.jc.framework.kaleido.converter;
 import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 
 /**
  * @author xiayc
@@ -15,11 +15,11 @@ public class UnBoxShortConverter extends AbstractConverter<Number, Short> {
     @Override
     public Short convert(Number source) {
         if (source == null) {
-            Instancers<Short> instancers = kaleidoscope.getInstancer(short.class);
-            if (instancers == null) {
+            InstanceSupport<Short> instanceSupport = kaleidoscope.getInstancer(short.class);
+            if (instanceSupport == null) {
                 throw new KaleidoException("没有找到[short]基本数据类型的Instancer");
             }
-            return instancers.getDefault();
+            return instanceSupport.getDefault();
         }
         return source.shortValue();
     }

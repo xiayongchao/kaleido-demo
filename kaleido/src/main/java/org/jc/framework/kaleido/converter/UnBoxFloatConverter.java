@@ -3,7 +3,7 @@ package org.jc.framework.kaleido.converter;
 import org.jc.framework.kaleido.annotation.Converter;
 import org.jc.framework.kaleido.annotation.TypeRecognition;
 import org.jc.framework.kaleido.exception.KaleidoException;
-import org.jc.framework.kaleido.instancer.Instancers;
+import org.jc.framework.kaleido.instancer.InstanceSupport;
 
 /**
  * @author xiayc
@@ -15,11 +15,11 @@ public class UnBoxFloatConverter extends AbstractConverter<Number, Float> {
     @Override
     public Float convert(Number source) {
         if (source == null) {
-            Instancers<Float> instancers = kaleidoscope.getInstancer(float.class);
-            if (instancers == null) {
+            InstanceSupport<Float> instanceSupport = kaleidoscope.getInstancer(float.class);
+            if (instanceSupport == null) {
                 throw new KaleidoException("没有找到[float]基本数据类型的Instancer");
             }
-            return instancers.getDefault();
+            return instanceSupport.getDefault();
         }
         return source.floatValue();
     }
